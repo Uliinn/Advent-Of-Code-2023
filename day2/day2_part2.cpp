@@ -1,17 +1,22 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "../timer.h"
 using namespace std;
 
 
 
 int main(int argc, char **argv) {
-    std::ifstream file("../day2/day2_input.txt");
+  Timer timer;
+  timer.begin();
+  
+  std::ifstream file("../day2/day2_input.txt");
 
-    if(!file.is_open()) {
-      std::cerr << "Error opening file.\n";
-      return 1;
-    }
+  if (!file.is_open())
+  {
+    std::cerr << "Error opening file.\n";
+    return 1;
+  }
 
     int sum = 0;
     string line;
@@ -46,4 +51,5 @@ int main(int argc, char **argv) {
       
     }
     cout << sum << '\n';
+    timer.stop();
   }

@@ -12,6 +12,6 @@ struct Timer {
     void stop() {
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-        printf("%.3f us\n", duration.count() / 1000.0);
+        printf("%lld us\n", duration.count());
     }
 };

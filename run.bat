@@ -6,7 +6,7 @@ pushd build
 set day=%1
 set part=%2
 
-cl /EHsc /nologo ../day%day%/day%day%_part%part%.cpp /Fe:day%day%_part%part%.exe
+cl /std:c++17 /EHsc /nologo ../day%day%/day%day%_part%part%.cpp /Fe:day%day%_part%part%.exe
 if errorlevel 1 goto end
 del day%day%_part%part%.obj
 day%day%_part%part%.exe

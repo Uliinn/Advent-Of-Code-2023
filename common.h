@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <string_view>
 #include <fstream>
 
 struct Timer {
@@ -20,5 +21,7 @@ struct Timer {
     }
 };
 
-std::vector<std::string> split(const std::string &s, char delimiter);
-std::vector<std::string> readlines(const std::string &filename);
+std::vector<std::string_view> split(std::string_view s, char delim);
+std::vector<std::string_view> split(std::string_view s);
+std::vector<std::string> readlines(std::ifstream &file);
+long long parse_ll(std::string_view sv);

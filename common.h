@@ -1,6 +1,10 @@
 #pragma once
 #include <chrono>
 #include <cstdio>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <fstream>
 
 struct Timer {
     std::chrono::time_point<std::chrono::high_resolution_clock> start;
@@ -15,3 +19,6 @@ struct Timer {
         printf("%lld us\n", duration.count());
     }
 };
+
+std::vector<std::string> split(const std::string &s, char delimiter);
+std::vector<std::string> readlines(const std::string &filename);

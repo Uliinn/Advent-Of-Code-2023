@@ -1,6 +1,6 @@
 #pragma once
 #include <chrono>
-// #include <cstdio>
+#include <cstdio>
 #include <string>
 #include <vector>
 #include <sstream>
@@ -26,4 +26,6 @@ struct Timer {
 std::vector<std::string_view> split(std::string_view s, char delim);
 std::vector<std::string_view> split(std::string_view s);
 std::vector<std::string> readlines(std::ifstream &file);
+
+int parse_int(std::string_view sv);
 long long parse_ll(std::string_view sv);

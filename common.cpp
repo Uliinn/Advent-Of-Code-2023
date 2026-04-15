@@ -1,6 +1,11 @@
 #include "common.h"
-#include <string_view>
 
+
+int parse_int(std::string_view sv) {
+    int result;
+    std::from_chars(sv.data(), sv.data() + sv.size(), result);
+    return result;
+}
 
 long long parse_ll(std::string_view sv) {
     long long result;
